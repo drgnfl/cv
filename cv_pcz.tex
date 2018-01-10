@@ -1,0 +1,126 @@
+% !TeX spellcheck = es_ES
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[10pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle[fullrules,center]{banking}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{purple}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{\textcolor{gray}{Pablo Andrés}}{\textcolor{gray}{Cárdenas Zamorano}}
+\title{}                               % optional, remove / comment the line if not wanted
+\address{Claudio Gay 2039}{Villa Alemana}{Chile}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{(+56~9)~62975992}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+%\phone[fixed]{+2~(345)~678~901}
+%\phone[fax]{+3~(456)~789~012}
+\email{pabloa.cardenasz@gmail.com}                               % optional, remove / comment the line if not wanted
+%\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
+%\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
+%\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
+\social[github]{drgnfl}                              % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Actualizado a Marzo de 2017}                                 % optional, remove / comment the line if not wanted
+
+% bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+
+\usepackage{xpatch}    % to patch the command ...
+\xpatchcmd{\makehead}{%
+  \setlength{\makeheaddetailswidth}{0.8\textwidth}%
+}{%
+  \setlength{\makeheaddetailswidth}{0.95\textwidth}%
+}{}{}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+\section{Educación}
+\subsection{Títulos Académicos}
+\cvlistitem{Grado de Bachiller en Ciencias de la Ingeniería}
+\cvlistitem{Grado de Licenciado en Ciencias de la Ingeniería Mecánica}
+\subsection{Enseñanza}
+\cventry{1998--2010}{Enseñanza Básica y Media}{Liceo y Escuela Juan XXIII}{Villa Alemana, Chile}{}{}
+\cventry{2011 a la fecha}{Ingeniería Civil Mecánica Mención Energía}{Universidad Técnica Federico Santa María}{Valparaíso, Chile}{\textit{Egresado}}{}
+\cventry{2016 a la fecha}{Magíster en Ciencias de la Ingeniería Mecánica}{Universidad Técnica Federico Santa María}{Valparaíso, Chile}{\textit{Tesista}}{}
+
+\section{Antecedentes Académicos}
+\cventry{2008--2010}{Alumno del programa BETA}{PUCV}{Valparaíso, Chile}{}{}
+\cventry{2012--2013}{Ayudante de Cátedra de Matemáticas II}{Departamento de Matemáticas, UTFSM}{Valparaíso, Chile}{}{}
+\cventry{2014}{Ayudante de Cátedra de Matemáticas I}{Departamento de Matemáticas, UTFSM}{Valparaíso, Chile}{}{}
+\cventry{2015--2016}{Ayudante de Cátedra de Mecánica de Fluidos General}{Departamento de Ing. Mecánica, UTFSM}{Valparaíso, Chile}{}{}
+\cventry{2015--2016}{Ayudante de Cátedra de Mecánica de Fluidos II}{Departamento de Ing. Mecánica, UTFSM}{Valparaíso, Chile}{}{}
+\cventry{2017}{Ayudante Corrector de Mecánica del Medio Continuo}{Departamento de Ing. Mecánica, UTFSM}{Valparaíso, Chile}{}{}
+\cventry{2016 a la fecha}{Tesista}{Departamento de Ing. Mecánica, UTFSM}{Valparaíso, Chile}{}{Trabajo como investigador en modelación atmosférica en terreno complejo.\newline{} Actualmente estoy desarrollando un algoritmo de caracterización y predicción de viento  en la meso-microescala con terreno complejo en base al software libre WRF, utilizando LES e incorporando datos de un nuevo sistema experimental de monitoreo de condiciones meteorológicas con globos aerostáticos que pretende reemplazar las torres meteorológicas convenciolanes.}
+\cventry{2017}{Autor}{XVI Jornadas de Mecánica Computacional}{La Serena, Chile}{}{Presentador de trabajo: \emph{Acoplamiento Meso-Microescala Utilizando WRF-LES Para la Simulación Numérica de Viento Sobre Terreno Complejo de Alta Resolución.}}
+\section{Antecedentes Laborales}
+\subsection{Práctica Industrial}
+\cventry{Enero 2017--Febrero 2017}{Alumno en Práctica}{Codelco División Andina}{Los Andes, Chile}{}{Formé parte del Área de Mantenimiento en la Superintendencia de Depósitos de Relaves de la Gerencia de Recursos Hídricos, Concentrados y Relaves de la división.\newline{}Ayudé en la automatización del cálculo y mejora de la disponibilidad de equipos en el sistema de bombeo de arenas, además de tareas menores como redacción de procedimientos y automatización de planillas.}%
+\subsection{Práctica Profesional}
+\cventry{Noviembre 2017--Diciembre 2017}{Alumno en Práctica}{Fundación Chile}{Santiago, Chile}{}{Apoyo para el proyecto Top-Ten dentro de la Gerencia de Sustentabilidad, el cual se encarga de trasparentar la información energética de los productos en el mercado. Me desarrollé en las labores operativas del proyecto calculando eficiencias, definiendo criterios energéticos, redactando informes para entes internacionales, etc. }%
+\section{Habilidades Computacionales}
+\cvitem{Software Básico}{AutoCAD, Autodesk Inventor}
+\cvitem{Software Intermedio}{MS Office, ANSYS, Excel, WRF}
+\cvitem{Software Avanzado}{\LaTeX}
+\cvitem{Habilidades de Programación}{Fortran, MATLAB, Python, VBA, Assembly}
+\cvitem{Manejo de SO}{Windows, UNIX}
+
+\section{Idiomas}
+\cvitem{Español}{Nativo}
+\cvitem{Inglés}{Avanzado (Escrito), Intermedio (Oral)}
+
+\section{Otros Antecedentes}
+\cvitemwithcomment{}{Integrante Lista de Honor UTFSM}{2011 a la fecha}
+\cvitemwithcomment{}{Bajista en un grupo musical}{2011 a la fecha}
+\cvitemwithcomment{}{Presidente Club de Música UTFSM}{2013--2014}
+\cvitemwithcomment{}{Presidente Centro de Alumnos del Depto. de Ing. Mecánica UTFSM}{2015}
+\cvitemwithcomment{}{Monitor Taller de Robótica Educativa para Escolares}{2017}
+\cvitem{}{Conocimientos básicos en seguridad de redes inalámbricas}
+\cvitem{}{Conocimientos básicos de robótica con Arduino}
+\cvitem{}{Becas y premios adjudicados:}
+\begin{itemize}
+  \item Beca BETA PUCV por la fundación ODEC
+  \item Premio al mérito académico para alumnos nuevos UTFSM
+  \item Beca Hijo Prof. Educación
+  \item Beca Excelencia Académica
+  \item Beca para Estudios de Magíster Científico en la USM
+\end{itemize}
+\section{Información Personal}
+\cvitem{Rut}{18.236.118-6}
+\cvitem{Fecha de Nacimiento}{01 de Julio de 1992}
+\cvitem{Edad}{25 Años}
+\cvitem{Estado Civil}{Soltero}
+\cvitem{Nacionalidad}{Chileno}
+\vspace*{\fill}
+\begin{center}
+	\emph{Actualizado a Enero de 2018}
+\end{center}
+\end{document} 
